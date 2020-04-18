@@ -7,16 +7,25 @@ CSS: Properties
 
 {% block text %}
 <p>
-    This is a website for all those
-    who would like to learn more about
-    how the web works, but have
-    always been perplexed by the 
-    the rapid pace at which it is
-    advancing and the sheer 
-    number of all the new
-    technologies arriving to the 
-    market every day.
+    While selectors define which
+    elements should the rules apply to,
+    properties describe how the 
+    element will be styled.
+    We have already seen a few 
+    properties in the previous examples,
+    but there are many more. You 
+    can read more on the CSS reference page on
+    MDN.
 </p>
+<div>
+    {{getheader("References")}}
+</div>
+<div>
+    {{getlist([
+        ("MDN: CSS Reference", "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference")
+        ])}}
+</div>
+
 {% endblock %}
 
 {% block previous_link %} 
