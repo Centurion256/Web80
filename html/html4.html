@@ -42,17 +42,114 @@ HTML: Interactive content
 </div>
 
 
+<div>
 <p>
-    This is a website for all those
-    who would like to learn more about
-    how the web works, but have
-    always been perplexed by the 
-    the rapid pace at which it is
-    advancing and the sheer 
-    number of all the new
-    technologies arriving to the 
-    market every day.
+    By now, if you have
+    read all the previous
+    articles, looked at the source code
+    and opened the tag/attribute
+    references, you know the
+    very basics of HTML. In fact,
+    you probably can recreate this website
+    in it's entirety! (without, of course, the
+    styles). But let's take a look at
+    a few other important features of HTML
 </p>
+<br>
+<p> 
+    Modern HTML allows us to insert very advanced
+    elements, which are essential to some of the
+    biggest platforms on the web today: video
+    and audio. MDN describes them perfectly:
+</p>
+</div>
+
+<div>
+<p>
+    Web developers have wanted to use video and audio
+    on the Web for a long time, ever since the early
+    2000s when we started to have bandwidth fast enough
+    to support any kind of video (video files are much
+    larger than text or even images.) In the early days,
+    native web technologies such as HTML didn't have the
+    ability to embed video and audio on the Web, so proprietary
+    (or plugin-based) technologies like Flash (and later, Silverlight)
+    became popular for handling such content. 
+    This kind of technology worked ok, but it had a number of problems, 
+    including not working well with HTML/CSS features, security issues, 
+    and accessibility issues.    
+</p>
+<br>
+<p>
+    A native solution would solve much of this if implemented correctly. 
+    Fortunately, a few years later the HTML5 specification had such features added, 
+    with the <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> elements, 
+    and some shiny new JavaScript APIs for controlling them. 
+    We'll not be looking at JavaScript here - just the basic foundations that can be achieved with HTML.
+</p>
+</div>
+<div>
+    
+<h3 class="typed" style="margin-bottom: 0;">
+Video and Audio
+</h3>
+<h3 style="margin-top: 0; margin-bottom: 0; ">
+
+---------------
+
+</h3>
+
+</div>
+<div>
+    <p>
+        Let's look at the elements themselves.
+        The <code>video</code> element allows you
+        to embed a video. It's notable attributes are:
+        <ul>
+            <li><code>src</code> - specifies the URL/path to the video content</li>
+            <li><code>controls</code> - allows user to control video playback</li>
+            <li><code>width</code> and <code>height</code> - sets the width and height of the videoplayer</li>
+            <li><code>autoplay</code> - plays the video automatically</li>
+            <li><code>loop</code> - loops the video playback</li>
+        </ul>
+        The content inside the <code>video</code> tag is the so-called fallback content:
+        it will be displayed in case the browser doesn't support video elements.
+    </p>
+    <br>
+    <p>
+        The <code>audio</code> element works similarly to <code>video</code>,
+        except that it doesn't support the <code>width</code> and <code>height</code>
+        attributes. It is also a good practice to add a child <code>track</code>
+        element, in order to make the content more accessible by providing
+        captions and a transcript. You can read more about the <code>track</code>
+        element on MDN.
+    </p>
+    
+</div>
+<div>
+    
+<h3 class="typed" style="margin-bottom: 0;">
+References
+</h3>
+<h3 style="margin-top: 0; margin-bottom: 0; ">
+
+----------
+
+</h3>
+
+</div>
+<div>
+    
+ <ol >
+ 
+     <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">MDN: Video and audio content</a></li>
+ 
+     <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">MDN: Track element</a></li>
+ 
+ </ol>
+
+</div>
+
 
 
 <footer id="footer-grid">

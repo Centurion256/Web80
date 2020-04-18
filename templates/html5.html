@@ -6,17 +6,105 @@ HTML: Iframes
 {% endblock %}
 
 {% block text %}
+<div>
 <p>
-    This is a website for all those
-    who would like to learn more about
-    how the web works, but have
-    always been perplexed by the 
-    the rapid pace at which it is
-    advancing and the sheer 
-    number of all the new
-    technologies arriving to the 
-    market every day.
+    The word "embed" has
+    been mentioned in 
+    Interactive content article
+    in the context of <code>video</code>
+    and <code>audio</code> elements, 
+    as well as images.
+    But what if we want to embed another
+    website, which is actually another
+    HTML document located somewhere on
+    the web? At first, it sounds like
+    a brilliant idea, let's get 
+    further into this topic.
 </p>
+</div>
+<div>
+ {{getheader("Brief history")}}
+</div>
+<div>
+    <p>
+        Again, let's refer to MDN
+        for a short history lesson:
+    </p>
+    <br>
+    <p>
+        A long time ago on the Web, it was popular to use 
+        frames to create websites - small parts of a website 
+        stored in individual HTML pages. These were embedded 
+        in a master document called a frameset, which allowed 
+        you to specify the area on the screen that each frame filled, 
+        rather like sizing the columns and rows of a table. 
+        These were considered the height of coolness in the mid to late 90s,
+        and there was evidence that having a webpage split up into smaller
+        chunks like this was better for download speeds - especially 
+        noticeable with network connections being so slow back then. 
+        They did however have many problems, which far outweighed any positives
+        as network speeds got faster, so you don't see them being used anymore.
+    </p>
+    <br>
+    <p>
+        A little while later (late 90s, early 2000s), plugin technologies became 
+        very popular, such as Java Applets and Flash - these allowed web developers to 
+        embed rich content into webpages such as videos and animations, which just weren't
+        available through HTML alone. Embedding these technologies was achieved through 
+        elements like <code>&lt;object&gt;</code>, and the lesser-used <code>&lt;embed&gt;</code>, 
+        and they were very useful at the time. 
+        They have since fallen out of fashion due to many problems, including accessibility, 
+        security, file size, and more; these days most mobile devices don't support such
+        plugins anymore, and desktop support is on the way out.
+    </p>
+    <br>
+    <p>
+        Finally, the <code>&lt;iframe&gt;</code> element appeared 
+        (along with other ways of embedding content, such as <code>&lt;canvas&gt;</code>, <code>&lt;video&gt;</code>, etc.) 
+        This provides a way to embed an entire web document inside another one, 
+        as if it were an <code>&lt;img&gt;</code> or other such element, and is used regularly today.
+        With the history lesson out of the way, let's move on and see how to use some of these.
+    </p>
+</div>
+<div>
+    {{getheader("Iframes")}}
+</div>
+<div>
+    <p>
+        Iframes elements are designed to allow you to embed other web documents into the current document. 
+        This is great for incorporating third-party content into your website that you might not have direct control 
+        over and don't want to have to implement your own version of, such as maps, video/image hostings, ads, etc.
+    </p>
+    <br>
+    <p>
+        In fact, most popular online content platforms (YouTube, Google Maps, Twitter, Facebook, etc.) provide you 
+        with a way to embed their content in your website using at <code>iframe</code>. The code snippets
+        are usually specified in the "Share" or "Embed" sections. Try embedding something yourself!
+    </p>
+    <br>
+    <p>
+        The <code>iframe</code> element has some advanced features available via it's attributes,
+        But for the most basic usage, the <code>src</code> attribute should be specified.
+        As you might have guessed, it contains a link the the website you would like to embed.
+    </p>
+    <br>
+    <p>
+        Finally, there are a few serious security concern revolving around embeding content.
+        I won't go into detail on them here, but as a rule of thumb, only use 
+        iframes when it is absolutely necessary. Fore more information, see the
+        references.
+    </p>
+</div>
+<div>
+    {{getheader("References")}}
+</div>
+<div>
+    {{getlist([
+        ("MDN: Embedding", "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies"),
+        ("MDN: Iframe", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe")
+        ])}}
+</div>
+
 {% endblock %}
 
 {% block previous_link %} 

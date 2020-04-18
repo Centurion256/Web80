@@ -6,17 +6,104 @@ CSS: Selectors
 {% endblock %}
 
 {% block text %}
+<div>
 <p>
-    This is a website for all those
-    who would like to learn more about
-    how the web works, but have
-    always been perplexed by the 
-    the rapid pace at which it is
-    advancing and the sheer 
-    number of all the new
-    technologies arriving to the 
-    market every day.
+    CSS is a rule-based language - you define rules specifying groups 
+    of styles that should be applied to particular elements or groups of elements on your web page.
+    
 </p>
+<br>
+<p>
+    For example, let's say that we want all main headings to be shown in red
+    and their font size to be 10 pixels. In CSS, this will translate into
+    the following rule
+</p>
+</div>
+<div>
+    <code style="justify-self: center;">h1 {
+        color: red;
+        font-size: 10px;
+    }</code>
+</div>
+<div>
+    <p>
+        The rule opens with a selector. 
+        This selects the HTML element that we are going to style. 
+        In this case we are styling level one headings (<code>&lt;h1&gt;</code>).
+    </p>
+    <br>
+    <p>
+        We then have a set of curly braces { }. 
+        Inside those will be one or more declarations, which take the form of property and value pairs. 
+        Each pair specifies a property of the element(s) we are selecting, then a value that we'd like to give the property.
+        Before the colon, we have the property, and after the colon, the value.
+    </p>
+    <br>
+    <p>
+        The property is an identifier, that is a human-readable name, that defines which feature is considered.
+        The value describes how the feature must be handled by the engine. Each property has a set of valid values.
+    </p>
+    <br>
+    <p>
+        In our example, we have two properties: <code>color</code> and <code>font-size</code>, each set to a corresponding values,
+        which are <code>red</code> and <code>10p(i)x(els)</code>, respectively. 
+        Essentially, a CSS stylesheet is just a collection a different rules for different selectors
+    </p>
+</div>
+<div>
+    {{getheader("Selectors")}}
+</div>
+<div>
+    <p>
+        Now we know what the basic structure of a CSS rule is, let's 
+        go deeper into the topic of selectors
+    </p>
+    <br>
+    <p>
+        In CSS, selectors are used to target the HTML elements on our web pages that we want to style.
+        A CSS selector is the first part of a CSS Rule.
+        There are different types of selectors, which allows us to style the desired elements in a 
+        desired way. In essence, writing good CSS is picking the right selectors for rules and
+        using the correct attributes.
+    </p>
+    <br>
+    <p>
+        In our previous example, we used a <code>h1</code> selector in our CSS rule.
+        What this meant was that for every level-one heading on the page, the 
+        style would be as follows. So therefore, this rule would apply to every ELEMENT
+        h1. Such selectors are therefore called element or type selectors, since they select
+        based on an element. There are other types of selectors, namely:
+        <ul>
+            <li>class selectors - select elements based on their <code>class</code> attribute</li>
+            <li>ID selectors - select elements based on their <code>id</code> attribute</li>
+            <li>Pseudo-class and pseudo-element selectors - rules that style certain states of an element, e.g. on mouse hover, on click</li>
+        </ul>
+        There are a few other, but we won't look into them right now.
+    </p>
+    <br>
+    <p>
+        Finally, it also makes sense to somehow combine these selectors to allow even greater precision.
+        For example, you might want to select all h1 elements which are children of an element with some
+        distinct ID. For such purposes, CSS uses combinators. There are a few of these:
+        <ul>
+            <li>Selector list <code>A, B</code> - apply the rule to both A and B</li>
+            <li>Adjacent sibling selector <code>A + B</code> - apply the rule to an element B which is a direct sibling of A</li>
+            <li>Child selectors <code>A > B</code> - apply the rule to an element B which is a direct child of A</li>
+            <li>Descendant selectors <code>A B</code> - apply the rile to an element B which is a descendant of A</li>
+        </ul> 
+    </p>
+</div>
+
+<div>
+    {{getheader("References")}}
+</div>
+<div>
+    {{getlist([
+        ("MDN: Getting Started with CSS", "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS"),
+        ("MDN: CSS Syntax", "https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax"),
+        ("MDN: Selectors", "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors")
+        ])}}
+</div>
 {% endblock %}
 
 {% block previous_link %} 
