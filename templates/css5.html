@@ -6,17 +6,22 @@ CSS: Grid
 {% endblock %}
 
 {% block text %}
+<div>
 <p>
-    This is a website for all those
-    who would like to learn more about
-    how the web works, but have
-    always been perplexed by the 
-    the rapid pace at which it is
-    advancing and the sheer 
-    number of all the new
-    technologies arriving to the 
-    market every day.
+    This article is a stub. It will be filled later on. For now, refer
+    to the MDN.
 </p>
+</div>
+
+<div>
+    {{getheader("References")}}
+</div>
+<div>
+    {{getlist([
+        ("MDN: CSS Grid Basics", "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout"),
+        ("MDN: CSS Grid Box layout", "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout")
+        ])}}
+</div>
 {% endblock %}
 
 {% block previous_link %} 

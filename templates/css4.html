@@ -6,9 +6,21 @@ CSS: Specificity
 {% endblock %}
 
 {% block text %}
+<div>
 <p>
-    This article is a stub. It will be filled later on.
+    This article is a stub. It will be filled later on. For now, refer
+    to the MDN.
 </p>
+</div>
+<div>
+    {{getheader("References")}}
+</div>
+<div>
+    {{getlist([
+        ("MDN: CSS Specificity", "https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity")
+        ])}}
+</div>
+
 {% endblock %}
 
 {% block previous_link %} 
