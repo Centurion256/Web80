@@ -1,0 +1,30 @@
+{% from 'marcos.jinja' import textbox, getline, getheader %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% block csslink %}{% endblock %}">
+    <title>{% block title %}{% endblock %}</title>
+
+</head>
+<body>
+    <div id="layout-grid">
+        <div id="pagetitle-grid">
+            <div class="boxed">    
+                <h1>{{textbox("Welcome to Web80!", 3)}}</h1>
+            </div>
+            <div>
+                <h2 class="typed">Learn web development in the 80'ies style</h2>
+            </div>
+        </div>
+        <div id="pagecontent-grid">
+            {% block content %}
+            {% endblock  %}
+        </div>
+    </div>
+        
+
+
+</body>
+</html>

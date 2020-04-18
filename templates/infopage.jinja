@@ -1,0 +1,21 @@
+{% from 'marcos.jinja' import textbox, getline, getheader, getlist %}
+{% extends 'base.jinja' %}
+
+{% block csslink %}
+../css/style.css
+{% endblock %}
+
+{% block content %}
+<div>
+    {{getheader(self.title()|trim)}}
+</div>
+
+{% block text %}
+{% endblock %}
+
+<footer id="footer-grid">
+    {% block previous_link %} {% endblock %}
+    <a style="justify-self: center" href="../index.html#toc-grid">Main Page</a>
+    {% block next_link %} {% endblock %}
+</footer>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% macro getline(linelen) %}
+{{"-"*linelen}}
+{% endmacro %}
+
+{%- macro textbox(text, padding) -%}
+[+>{{getline(padding|int*2 + text|string|length)|trim}}<+]
+[+>{{" "*padding|int + text|string + " "*padding|int}}<+]
+[+>{{getline(padding|int*2 + text|string|length)|trim}}<+]
+{%- endmacro -%}
+
+{% macro getheader(word) %}
+<h3 class="typed" style="margin-bottom: 0;">
+{{word}}
+</h3>
+<h3 style="margin-top: 0; margin-bottom: 0; ">
+{{getline(word|length)}}
+</h3>
+{% endmacro %}
+
+{% macro getlist(titles_links) %}
+ <ol >
+ {% for entry in titles_links %}
+     <li><a href="{{entry[1]}}">{{entry[0]}}</a></li>
+ {% endfor %}
+ </ol>
+{% endmacro %}

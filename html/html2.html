@@ -1,0 +1,301 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="
+../css/style.css
+">
+    <title>
+HTML: Structure
+</title>
+
+</head>
+<body>
+    <div id="layout-grid">
+        <div id="pagetitle-grid">
+            <div class="boxed">    
+                <h1>[+>-----------------------<+]
+[+>   Welcome to Web80!   <+]
+[+>-----------------------<+]</h1>
+            </div>
+            <div>
+                <h2 class="typed">Learn web development in the 80'ies style</h2>
+            </div>
+        </div>
+        <div id="pagecontent-grid">
+            
+<div>
+    
+<h3 class="typed" style="margin-bottom: 0;">
+HTML: Structure
+</h3>
+<h3 style="margin-top: 0; margin-bottom: 0; ">
+
+---------------
+
+</h3>
+
+</div>
+
+
+<div>
+<p>
+    We already mentioned that HTML
+    uses elements to logically structure
+    a page. But how do we do that?
+    In order to speparate and distinguish
+    elements, HTML uses tags. 
+    Tags basically tell the reader
+    which element they're looking at,
+    what properties does it have and 
+    where does it end. Tag is the 
+    very basic component that 
+    describes the web page, all content
+    is in some tag or another. There 
+    are numerous tag for different 
+    purposes, we will only look at
+    a few of them in this tutorial, but you
+    can find an exhaustive list in the
+    references.
+</p>
+</div>
+<div>
+<h3 class="typed" style="margin-bottom: 0;">
+Anatomy of an HTML element
+</h3>
+<h3 style="margin-top: 0; margin-bottom: 0; ">
+
+--------------------------
+
+</h3>
+</div>
+<div>
+    <p>
+    Let's look at this example from MDN:
+    Suppose you wanted to represent the
+    sentence 
+    </p>
+
+    <div style="text-align: center;">My cat is very grumpy</div>
+    <p>
+    in HTML. Since this is our only
+    sentence, it is reasonable
+    to put it in a paragraph,
+    just like we would in play english.
+    In terms of HTML, this would 
+    mean that we have to represent it
+    as a "paragraph" element. Luckily, 
+    HTML has a <code>&lt;p&gt;</code> tag.
+    That is good to know, but how 
+    do we specify that our sentence
+    should be a paragraph?
+    </p>
+    <br>
+    <p>
+        HTML has an answer: wrap
+        the text with the <code>&lt;p&gt;</code>
+        tag, like so:
+    </p>
+    <img src="https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png" alt="">
+    <p>
+        Here, <code>&lt;p&gt;</code> is used to
+        denote the beginning of the tag, and
+        <code>&lt;/p&gt;</code> - the ending.
+        Simple, right?
+    </p>
+    <br>
+    <p>
+        Elements may also have different
+        attributes, what would distinguish them
+        from other similar elements or make it
+        easier to classify them. This will 
+        be further elaborated upon in our next
+        section.
+    </p>
+    <br>
+    <p> There are some other important properties,
+        for exapmple we can nest elements inside
+        other elements. Some elements also 
+        may be empty, and contain no other
+        content but their name and attributes.
+        A good example would be a <code>&lt;br&gt;</code>
+        element, which simply breaks the line.
+    </p>
+    <br>
+    <p>
+        To conclude, writing good HTML is basically
+        finding the correct tags to use in 
+        a given occasion. There is another
+        important divison of HTML elements:
+        Semantic and Non-semantic.
+    </p>
+    <p>
+        Semantic elements are elements which
+        are clearly descriptive of their content,
+        e.g. <code>&lt;p&gt;</code> always
+        should be used to denote a paragraph,
+        <code>&lt;br&gt;</code> denotes a break
+        in the line, <code>&lt;img&gt;</code>
+        contains an image, etc.
+        Most HTML elements are semantic.
+        Does this, however, imply that they are
+        the most commonly used? Suprisingly, no.
+    </p>
+    <br>
+    <p>
+        Non-semantic elements are generic elements:
+        they tell nothing about the content,
+        just that there is some divison.
+        Two most common non-semantic elements
+        are  <code>&lt;div&gt;</code> and
+        <code>&lt;span&gt;</code>, the first
+        (by default) used for block separation
+        and the latter for inline. These two,
+        <code>&lt;div&gt;</code> especially,
+        are very commonly used.
+        The reason is that while they tell
+        nothing about the content explicitly,
+        they do, combined with
+        appropriate attributes, divide the
+        page logically. This is especially
+        useful for CSS and scripting
+        languages, but more on that later.
+    </p>
+</div>
+<div>
+    
+<h3 class="typed" style="margin-bottom: 0;">
+Anatomy of HTML Document
+</h3>
+<h3 style="margin-top: 0; margin-bottom: 0; ">
+
+------------------------
+
+</h3>
+
+</div>
+<div>
+    <p>We now know what elements are
+        and how to represent them in HTML.
+        But what does the entire HTML page
+        consist of?
+    </p>
+    <br>
+    <p>The first line should ALWAYS be
+        <code>&lt;!DOCTYPE html&gt;</code>.
+        Nowadays, this doesn't really
+        represent anything, but in the
+        past it was used to represent
+        a ruleset/convension that the document
+        would follow. Nowadays, 
+        this is obsolete, but
+        the line still remains. 
+        Always remember to contain it
+        at the top of the document.
+    </p>
+    <br>
+    <p>
+        Next is the <code>html</code> element.
+        It is known as the root element that
+        encloses the content of your document.
+    </p>
+    <br>
+    <p>
+        The <code>head</code> element is
+        used for content that describes the
+        page itself, but isn't displayed
+        to the end user. This doesn't mean
+        that it doesn't affect the rest of
+        the document: in fact it does, since
+        such information as the title of
+        the document, keywords for
+        search engines, character encoding,
+        links to external
+        content that is used, such as
+        CSS styles, fonts or external libraries,
+        etc. We won't cover a lot of it in this
+        tutorial, but more information is 
+        available in the references.
+    </p>
+    <br>
+    <p>
+        The <code>body</code> element is
+        where most of the content of the
+        document is located.
+    </p>
+
+</div>
+<div>
+    
+<h3 class="typed" style="margin-bottom: 0;">
+Applications
+</h3>
+<h3 style="margin-top: 0; margin-bottom: 0; ">
+
+------------
+
+</h3>
+
+</div>
+<div>
+    <p>
+        Take a look at the source code
+        of this webpage. Do you see
+        the document structure described
+        above? Do you recognize some
+        of the elements? Can you 
+        guess what some of the attributes
+        mean?
+    </p>
+</div>
+<div>
+    
+<h3 class="typed" style="margin-bottom: 0;">
+References
+</h3>
+<h3 style="margin-top: 0; margin-bottom: 0; ">
+
+----------
+
+</h3>
+
+</div>
+<div>
+    
+ <ol >
+ 
+     <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN: Getting started with HTML</a></li>
+ 
+     <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">MDN: Metatada in HTML</a></li>
+ 
+     <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">W3C: HTML Semantic elements</a></li>
+ 
+     <li><a href="https://www.w3schools.com/tags/default.asp">HTML element reference</a></li>
+ 
+ </ol>
+
+</div>
+
+
+
+<footer id="footer-grid">
+     
+<a style="justify-self: end" href="html1.html">About HTML</a>
+
+    <a style="justify-self: center" href="../index.html#toc-grid">Main Page</a>
+     
+<a style="justify-self: start" href="html3.html">HTML: Attributes</a>
+
+</footer>
+
+        </div>
+    </div>
+        
+
+
+</body>
+</html>

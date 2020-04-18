@@ -1,0 +1,121 @@
+{% from 'marcos.jinja' import textbox, getline, getheader, getlist %}
+{% extends 'infopage.jinja' %}
+
+{% block title %}
+HTML: Attributes
+{% endblock %}
+
+{% block text %}
+<div>
+<p>
+    In the previous
+    section we 
+    mentioned that
+    elements can 
+    have attributes 
+    and that these
+    attributes can
+    either somehow identify
+    the element or set 
+    some of  it's properties.
+</p>
+<br>
+<p>
+    Consider the example
+    from the previous 
+    page. If we add
+    an attribute
+    <code>class</code> to it,
+    and set it to some value,
+    we'll get this:
+</p>
+<img src="https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png" alt="">
+<p>
+    In this case, <code>class</code>
+    attribute allows you to give
+    an element an identifying name,
+    that can be used to target said
+    element by CSS.
+</p>
+<br>
+<p>
+    All HTML attributes have the following
+    properties:
+    <ul>
+        <li>All HTML elements can have attributes</li>
+        <li>Attributes provide additional information about an element</li>
+        <li>Attributes are always specified in the start tag</li>
+        <li>An attribute should have a space between it and the element name or the previous attribute</li>
+    </ul>
+</p>
+<br>
+<p>
+    While most attributes come in <code>attribute=value</code> pairs,
+    some attributes can only have the values <code>true</code>
+    or <code>false</code>, therefore if their name is present,
+    their value is considered to be <code>true</code>, otherwise
+    it is <code>false</code>. Such attributes are called Boolean attributes.
+</p>
+<br>
+<p>
+    There is another distinction between the atributes: global and element-specific.
+</p>
+<br>
+<p>
+    Global attributes are attributes common to all HTML elements; 
+    they can be used on all elements, though they may have no effect on some elements.
+    <code>class</code> is one example of such attributes, it can be
+    present on any element, and use used to identify groups of elements.
+    Another such element is <code>id</code>. It serves a similar purpose
+    as class, but there must exist only one unique element associated
+    with one unique id, while multiple elements can have the same class.
+</p>
+<br>
+<p>
+    Non-global or element-specific attributes are attributes that can be
+    present only on specific set of attributes, and can have different
+    meanings in each of them. They also tend to have some reserved
+    values associated with them. An example would be the <code>href</code>
+    attribute of the <code>&lt;a&gt;</code> element.
+    <br>
+    Element <code>&lt;a&gt;</code> or the "anchor"element is used
+    to create a link to another document. The content of the element
+    is it's content representation(most commonly text), while
+    the <code>href</code> attribute is used to actually specify 
+    the URL.
+</p>
+</div>
+<div>
+    {{getheader("Applications")}}
+</div>
+<div>
+    <p>
+        All the links on this page are
+        created using the <code>href</code>
+        attribute. Also, notice the
+        classes and ids used throughout
+        the document. Can you guess some of
+        their meanings?
+    </p>
+</div>
+<div>
+    {{getheader("References")}}
+</div>
+<div>
+    {{getlist([
+        ("MDN: Getting started with HTML", "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"),
+        ("MDN: Global Attributes", "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes"),
+        ("W3C HTML Attributes", "https://www.w3schools.com/html/html_attributes.asp"),
+        ("HTML Attribute reference", "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes")
+        ])}}
+</div>
+
+
+{% endblock %}
+
+{% block previous_link %} 
+<a style="justify-self: end" href="html2.html">HTML: Structure</a>
+{% endblock %}
+{% block next_link %} 
+<a style="justify-self: start" href="html4.html">HTML: Interactive content</a>
+{% endblock %}

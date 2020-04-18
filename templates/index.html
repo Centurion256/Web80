@@ -1,0 +1,109 @@
+{% from 'marcos.jinja' import textbox, getline, getheader, getlist %}
+{% extends 'base.jinja' %}
+
+{% block csslink %}
+css/style.css
+{% endblock %}
+
+{% block title %}
+Web80
+{% endblock %}    
+
+{% block content %}
+<div>
+    {{getheader("A brief introduction")}}
+    <!-- <h3 class="typed">A brief introduction</h3>
+    <h3>{{getline(20)}}</h3> -->
+</div>
+<div>
+    <p>
+        This is a website for all those
+        who would like to learn more about
+        how the web works, but have
+        always been perplexed by the 
+        the rapid pace at which it is
+        advancing and the sheer 
+        number of all the new
+        technologies arriving to the 
+        market every day.
+    </p>
+    <br>
+    <p>
+        It's true, unfortunately, the
+        current state of the art 
+        web stack is nothing but 
+        a mess: the sad state of JS,
+        Web 2.0 being virtually dead, 
+        a whole park of frameworks
+        that supposedly make your life
+        easier and numerous "workarounds"
+        which make you question the 
+        sanity of their creators. Even
+        Tim Berners Lee has long since
+        acknowledged that Web is going
+        nowhere.
+    </p>
+    <br>
+    <p>
+        But here, we will try to
+        lock at web technologies in a simple
+        and systematic way: no overcomplicated
+        technologies, just pure idiomatic
+        HTML5 and CSS. This tutorial probably
+        won't teach you what it takes to be
+        a contemporary web developer, but rather
+        will, hopefully, give you a different look at what
+        the Web could've been and, perhaps, 
+        should've been. I work a lot with
+        technology from the past decade,
+        specifically with hardware and software
+        based on the Z80 CPU and it's descendants.
+        At that time, technologies were far simpler
+        for the developer (albeit less accessible
+        for the user) than they are now, so
+        let us imagine that we're front end
+        developers from the 80'ies and that we have
+        limited technologies (only HTML and CSS).
+        Hopefully, by the end of this series, 
+        you will be able to recreate this
+        website from scratch by yourself.
+    </p>
+    <br>
+    <p>
+        Below is the table of contents. The tutorial
+        is separated into two parts: HTML and CSS.
+        If a concept that was covered on a page 
+        was used while developing the this website,
+        it will be mentioned in the "Applications"
+        section. Finally, make sure to visit all the
+        references if you want to know more.    
+    </p>
+</div>
+<div>
+    {{getheader("Table of contents")}}
+</div>
+<div id="toc-grid">
+    <div style="grid-area: a;">
+        <h4 style="text-align: center;" class="boxed">{{textbox("HTML", 1)}}</h4>
+        {{getlist([
+            ("About HTML", "./html/html1"),
+            ("HTML: Structure", "./html/html2"),
+            ("HTML: Attributes", "./html/html3"),
+            ("HTML: Interactive content", "./html/html4"),    
+            ("HTML: Iframes", "./html/html5"),    
+            ("HTML: Miscellaneous", "./html/html6")    
+        ])}}
+    </div>
+    <div style="grid-area: b;">
+        <h4 style="text-align: center;" class="boxed">{{textbox("CSS", 1)}}</h4>
+        {{getlist([
+            ("About CSS", "./html/css1"),
+            ("CSS: Selectors", "./html/css2"),
+            ("CSS: Properties", "./html/css3"),
+            ("CSS: Specificity", "./html/css4"),    
+            ("CSS: Grid", "./html/css5"),    
+            ("CSS: Keyframes", "./html/css6")  
+        ])}}
+    </div>
+</div>
+{% endblock %}

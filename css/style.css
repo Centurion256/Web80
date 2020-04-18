@@ -1,0 +1,147 @@
+@font-face {
+    font-family: GlassTTYVT220;
+    src: url(../fonts/Glass_TTY_VT220.ttf);
+}
+
+@keyframes blink {
+    from, to { border-color: #e5b800 }
+    50% { border-color: transparent; }
+  }
+  
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+body {
+    background: black;
+    font-family: GlassTTYVT220;
+    color: #e5b800;
+}
+
+#pagetitle-grid h1 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.boxed {
+    white-space: pre-wrap;
+}
+
+#pagetitle-grid h2 {
+    margin: 0 0;
+    letter-spacing: .15em;
+    align-self: start;
+
+}
+
+#pagetitle-grid .typed {
+    overflow: hidden;
+    border-right: .45em solid #e5b800;
+    white-space: nowrap;
+    animation: 
+        typing 2s steps(50, end),
+        blink .75s step-end infinite;
+}
+
+#pagecontent-grid .typed {
+    overflow: hidden;
+    border-right: .45em solid #e5b800;
+    white-space: nowrap;
+    animation: 
+        typing 0.5s steps(50, end),
+        blink .75s step-end infinite;
+}
+#layout-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(auto, 200px) auto;
+    /* grid-template-rows: auto; */
+    /* grid-template-rows: 25% 75%; */
+    grid-auto-rows: auto;
+    gap: 2em 0;
+    grid-template-areas: ". a ."
+                         ". b .";
+    justify-items: center;
+    align-items: start;
+}
+
+#pagetitle-grid {
+    grid-area: a;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    /* justify-items: start; */
+    align-items: start;
+    
+}
+
+#pagecontent-grid {
+    grid-area: b;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em 0;
+    justify-items: start;
+}
+
+#toc-grid {
+    display: grid;
+    justify-self: stretch;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a b";
+    justify-items: center;
+    /* margin-right: 0.45em; */
+    /* gap: 0 100px; */
+    /* align-items: center; */
+}
+#footer-grid {
+    display: grid;
+    align-self: end;
+    justify-self: stretch;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+a {
+    text-decoration: none;
+    
+}
+a:link {
+    color: #e5b800;
+    border-right: .45em solid transparent;
+}
+
+a:visited {
+    color: #e5b800;
+    border-right: .45em solid transparent;
+}
+
+a:focus {
+    color: black;
+    background: #e5b800;
+    outline: 0;
+}
+
+a:hover {
+    color: #ecc800;
+    /* white-space: nowrap; */
+    border-right: .45em solid #e5b800;
+    animation: blink 0.75s step-end infinite;
+}
+
+a:active {
+    color: black;
+    background: #e5b800;
+
+}
+
+code {
+    font-family: GlassTTYVT220;
+    background: rgb(49, 49, 49);
+    padding: 0.05em;
+    border: 0.05em dashed #e5b800;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
